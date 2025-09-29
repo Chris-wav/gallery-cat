@@ -1,0 +1,20 @@
+.headerContainer {
+  background: linear-gradient(135deg, #f4e1c1, #d4a373);
+  text-align: center;
+  padding: 2rem;
+  border-bottom: 4px solid #b5894b;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 20px 20px;
+  transition: transform 0.3s ease;
+}
+.title {
+  font-family: "Papyrus", "Arial", sans-serif;
+  color: #b35f00;
+  font-size: 2.5rem;
+  margin: 0;
+  letter-spacing: 2px;
+}
+.headerContainer:hover {
+  transform: scale(1.02);
+  cursor: default;
+}

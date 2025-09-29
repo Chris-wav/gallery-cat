@@ -1,0 +1,82 @@
+.navContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #fef7ec, #fff3e0);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+}
+
+.searchWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  flex: 1;
+  max-width: 450px;
+}
+
+.buttonWrapper {
+  display: flex;
+}
+
+.searchBar {
+  flex: 1;
+  min-width: 150px;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #d4a373;
+  font-size: 1rem;
+  outline: none;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.searchBar:focus {
+  border-color: #b5894b;
+  box-shadow: 0 0 8px rgba(181, 137, 75, 0.4);
+}
+
+.favouritesButton,
+.adoptedButton,
+.backToHomeButton {
+  padding: 0.5rem 0.8rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #d4a373;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+  margin: 0;
+}
+
+.favouritesButton:hover,
+.adoptedButton:hover {
+  background-color: #b5894b;
+  transform: scale(1.05);
+}
+
+.favouritesButton {
+  background-color: #d4a373;
+}
+.favouritesButton:hover {
+  background-color: #b5894b;
+  transform: scale(1.05);
+}
+
+.adoptedButton {
+  background-color: #4caf50;
+}
+.adoptedButton:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+
+.backToHomeButton {
+  background-color: #1e90ff;
+}
+.backToHomeButton:hover {
+  background-color: #0b66c2;
+  transform: scale(1.05);
+}

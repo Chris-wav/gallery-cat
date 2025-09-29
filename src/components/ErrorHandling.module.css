@@ -1,0 +1,29 @@
+.messageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: rgba(255, 229, 180, 0.8);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: float 1.5s ease-in-out infinite alternate;
+  height: 200px;
+}
+
+.message {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 1rem;
+  color: grey;
+  text-align: center;
+  margin: 0;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-5px);
+  }
+}
