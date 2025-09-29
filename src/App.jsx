@@ -31,36 +31,37 @@ function App() {
     <>
       {/* App header */}
       <Header />
-
-      {/* Task bar for search and view switching */}
-      <TaskBar
-        setSearchedCatResults={setSearchedCatResults}
-        searchedCat={searchedCat}
-        setView={setView}
-        setSearchedCat={setSearchedCat}
-      />
-
-      {/* Render the appropriate view */}
-      {view === "home" && (
-        <Main
-          searchedCatResults={searchedCatResults}
+      <div className="mainWrapper">
+        {/* Task bar for search and view switching */}
+        <TaskBar
+          setSearchedCatResults={setSearchedCatResults}
           searchedCat={searchedCat}
-          handleToggle={handleToggle}
-          selectedCatId={selectedCatId}
+          setView={setView}
+          setSearchedCat={setSearchedCat}
         />
-      )}
-      {view === "favourites" && (
-        <FavouriteCats
-          handleToggle={handleToggle}
-          selectedCatId={selectedCatId}
-        />
-      )}
-      {view === "adopted" && (
-        <AdoptedCats
-          handleToggle={handleToggle}
-          selectedCatId={selectedCatId}
-        />
-      )}
+
+        {/* Render the appropriate view */}
+        {view === "home" && (
+          <Main
+            searchedCatResults={searchedCatResults}
+            searchedCat={searchedCat}
+            handleToggle={handleToggle}
+            selectedCatId={selectedCatId}
+          />
+        )}
+        {view === "favourites" && (
+          <FavouriteCats
+            handleToggle={handleToggle}
+            selectedCatId={selectedCatId}
+          />
+        )}
+        {view === "adopted" && (
+          <AdoptedCats
+            handleToggle={handleToggle}
+            selectedCatId={selectedCatId}
+          />
+        )}
+      </div>
     </>
   );
 }

@@ -1,4 +1,3 @@
-// api.js
 export const fetchCats = async () => {
   try {
     const response = await fetch("https://api.thecatapi.com/v1/breeds", {
@@ -11,9 +10,10 @@ export const fetchCats = async () => {
 
     const data = await response.json();
 
+    // Σιγουρεύουμε ότι κάθε cat έχει url
     return data.map((cat) => ({
       ...cat,
-      image: cat.image || { url: "/fallback-cat.png" },
+      url: cat.url || cat.image?.url || "/fallback-cat.png",
     }));
   } catch (error) {
     console.error("Failed to fetch cats:", error);

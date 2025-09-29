@@ -58,7 +58,11 @@ const TaskBar = ({
         </button>
         <button
           className={styles.backToHomeButton}
-          onClick={() => setView("home")}
+          onClick={() => {
+            setView("home");
+            setSearchedCat("");
+            setSearchedCatResults([]);
+          }}
         >
           Back to home
         </button>
